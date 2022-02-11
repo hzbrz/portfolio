@@ -1,0 +1,133 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 75rem;
+  padding-left: 5px;
+}
+
+#namelogo {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: #191919;
+}
+
+.display-4 {
+  font-size: 2.9rem !important;
+  font-weight: 500 !important;
+}
+
+.text-dark-blue {
+  color: #161f38;
+}
+
+#personal-quality {
+  font-size: 1.1rem;
+  font-weight: 590;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+  width: 50%;
+  /* color: #666; */
+}
+
+.personal-quality-bold {
+  font-weight: 700;
+}
+
+#resume {
+  color: #ffffff;
+  margin-right: 12px;
+}
+
+#resume:hover {
+  text-decoration: none;
+}
+
+.btn-dark {
+  width: 8rem;
+  height: 3rem;
+  font-weight: 400 !important;
+  background-color: #000000 !important;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-dark:hover {
+  background-color: #000000 !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.btn-orange {
+  /* background-color: #ff5722; */
+  background-color: #dd7729;
+  width: 8rem;
+  height: 3rem;
+  font-weight: 400 !important;
+  border-radius: 22px;
+  color: white !important;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-orange:hover {
+  background-color: #dd7729;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  /* box-shadow: 0px 10px 30px rgb(255, 87, 34); */
+  box-shadow: 0px 10px 30px #f27413;
+  border: none;
+}
+
+.cardBtn {
+  background-color: #000000 !important;
+  margin-right: 10px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .cardStyle {
+    margin-left: 50px !important; 
+    margin-bottom: 50px;
+  }
+}
+
+.cardStyle {
+  margin-left: 0px; 
+  margin-bottom: 50px;
+}
+
+.cardBtn:hover {
+  background-color: #dd7729 !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  box-shadow: 0px 10px 30px rgb(255, 87, 34);
+  /* box-shadow: 0px 10px 30px #f27413; */
+  border: none;
+}
+
+.h2Title {
+  text-align: center; 
+  margin-top: 100px; 
+  font-weight: 900;
+}
+
+.svgLogoStyles {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* 
+@media only screen and (min-width: 1000px) {
+  .paperText {
+    height: 500px !important;
+  }
+} */
