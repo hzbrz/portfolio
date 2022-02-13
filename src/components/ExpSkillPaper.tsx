@@ -2,26 +2,22 @@ import { FC } from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { TagButton } from './TagButton';
-import { RMRL } from './RMRL';
 
 export interface PaperProps {
   paperWidth: number;
-  paperHeight: number;
   title: string;
   position: string;
   iconNames: string[] | null;
-  body: string;
   paperType: "elevation" | "outlined" | undefined;
 }
 
 // adding a static height using the paperHeight props makes the text inside paper un-responsive
 export const ExpSkillPaper: FC<PaperProps> = ({ paperWidth, 
-                                                paperHeight, 
                                                 title, 
                                                 position,
                                                 iconNames, 
-                                                body, 
-                                                paperType 
+                                                paperType,
+                                                children 
 }) => {
     return (
       <>
@@ -35,7 +31,6 @@ export const ExpSkillPaper: FC<PaperProps> = ({ paperWidth,
               marginBottom: '20px',
               padding: '20px',
               width: paperWidth,
-              // height: paperHeight,
             },
           }}
         >
@@ -52,10 +47,8 @@ export const ExpSkillPaper: FC<PaperProps> = ({ paperWidth,
                 :
                 <TagButton icon={null} name={null} />
               }
-              <p>
-                <RMRL body={body} />
-              </p>
             </div>
+            {children}
           </Paper>
         </Box>
       </>

@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 import { TagButton } from './TagButton';
-import { RMRL } from './RMRL';
-import { Container } from '@mui/material';
+import { RMRLHtml } from './RMRLhtml';
 
 
 export interface CardProps {
@@ -40,7 +39,7 @@ export const ProjectCard: FC<CardProps> = ({ icons, circle, title, body, mediaLi
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            <RMRL body={body} />
+            <RMRLHtml body={body} sliceEnd={200} />
           </Typography>
         </CardContent>
         <CardActions style={{ position: 'absolute', bottom: 0 }}>
