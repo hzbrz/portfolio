@@ -1,14 +1,15 @@
 html {
   scroll-behavior: smooth;
-  position: relative;
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  min-height: 75rem;
-  padding-left: 5px;
-  margin: 0 0 160px;
+  min-height: 100%;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #namelogo {
@@ -93,6 +94,16 @@ body {
 .cardBtn {
   background-color: #000000 !important;
   margin-right: 10px !important;
+  color: white !important;
+}
+
+.cardBtn:hover {
+  background-color: #dd7729 !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  box-shadow: 0px 10px 30px rgb(255, 87, 34);
+  /* box-shadow: 0px 10px 30px #f27413; */
+  border: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -107,14 +118,6 @@ body {
   margin-bottom: 50px;
 }
 
-.cardBtn:hover {
-  background-color: #dd7729 !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  box-shadow: 0px 10px 30px rgb(255, 87, 34);
-  /* box-shadow: 0px 10px 30px #f27413; */
-  border: none;
-}
 
 .h2Title {
   text-align: center; 
@@ -130,12 +133,8 @@ body {
 
 footer {
   background-color: #121211;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
+  padding: 1em;
+  margin-top: auto;
 }
 
 .footerLink {
@@ -144,6 +143,11 @@ footer {
   color: #E1DBD7;
   margin-right: 40px;
   font-weight: 800;
+}
+
+.footerLink:hover {
+  color: #dd7729;
+  text-shadow: 0px 10px 30px rgb(255, 87, 34)
 }
 
 #footerTop {
@@ -155,6 +159,10 @@ footer {
   box-shadow: none;
 }
 
+#footerTop:hover {
+  box-shadow: 0px 10px 30px rgb(255, 87, 34);
+}
+
 #footerP { 
   color: white; 
   font-size: 12px; 
@@ -162,11 +170,19 @@ footer {
 }
 
 #footerP:hover {
-  cursor: grab;
+  cursor: pointer;
 }
-/* 
-@media only screen and (min-width: 1000px) {
-  .paperText {
-    height: 500px !important;
-  }
-} */
+
+.css-1k23hlb-MuiButtonBase-root-MuiButton-root:hover {
+  box-shadow: 0px 10px 30px rgb(255, 87, 34) !important;
+  background-color: #ee670c6e !important;
+}
+
+.css-1is3qj5-MuiButtonBase-root-MuiButton-root:hover {
+  box-shadow: 0px 10px 30px rgb(255, 87, 34) !important;
+  background-color: #ee670c6e !important;
+}
+
+#myBtn:hover {
+  background-color: #77f80e23 !important;
+}

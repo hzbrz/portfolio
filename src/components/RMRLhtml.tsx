@@ -17,7 +17,7 @@ export const RMRLHtml: FC<Props> = ({ body, sliceEnd }) => {
   return (
     <>
       <div dangerouslySetInnerHTML={{ __html: !show ? body.slice(0, sliceEnd)+'...' : body }} />
-      <Button style={{ paddingLeft: '0px' }} onClick={showMore} id="myBtn">Read {!show ? 'more' : 'less'}</Button>
+      <Button color='success' style={{ paddingLeft: '0px' }} onClick={showMore} id="myBtn">Read {!show ? 'more' : 'less'}</Button>
     </>
   );
 }

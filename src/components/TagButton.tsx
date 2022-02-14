@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconName } from '@fortawesome/fontawesome-svg-core';
+
 
 export interface TagProps {
   name: string | null;
@@ -20,13 +22,13 @@ export const TagButton: FC<TagProps> = ({ icon, name }) => {
               // mask={['fas', circle]}
               // transform="grow-7 left-3 up-5"
               size='1x'
-              style={{ color: 'black', fontSize: '17px' }}
+              style={{ color: 'inherit', fontSize: '17px' }}
             // fixedWidth
             />
           }
-          style={{ marginRight: '10px', marginBottom: '10px' }}
+          style={{ marginRight: '10px', marginBottom: '10px', borderColor: '#dd7729', color: 'inherit' }}
         >
-          <p style={{ margin: 0, marginTop: '5px', fontSize: '10px' }}>{name}</p>
+          <Typography variant='caption' style={{ margin: 0, marginTop: '5px', fontSize: '10px', padding: '0px' }}>{name}</Typography>
         </Button>
       </>
     );
@@ -34,7 +36,7 @@ export const TagButton: FC<TagProps> = ({ icon, name }) => {
     return (
       <>
         <Button size='small' variant='outlined'
-          style={{ marginRight: '10px', marginBottom: '10px', padding: '1px 4px' }}
+          style={{ marginRight: '10px', marginBottom: '10px', padding: '1px 4px', borderColor: '#dd7729', color: 'inherit' }}
         >
           <p style={{ margin: 0, marginTop: '5px', fontSize: '10px' }}>{name}</p>
         </Button>
