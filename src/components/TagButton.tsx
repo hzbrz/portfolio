@@ -16,6 +16,7 @@ export const TagButton: FC<TagProps> = ({ icon, name }) => {
     return (
       <>
         <Button size='small' variant='outlined'
+          className='tag'
           startIcon={
             <FontAwesomeIcon
               icon={icon !== 'database' ? ['fab', icon] : ['fas', icon]}
@@ -35,7 +36,7 @@ export const TagButton: FC<TagProps> = ({ icon, name }) => {
   } else if (!icon && name) {
     return (
       <>
-        <Button size='small' variant='outlined'
+        <Button size='small' variant='outlined' className='tag'
           style={{ marginRight: '10px', marginBottom: '10px', padding: '1px 4px', borderColor: '#dd7729', color: 'inherit' }}
         >
           <p style={{ margin: 0, marginTop: '5px', fontSize: '10px' }}>{name}</p>

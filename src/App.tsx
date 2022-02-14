@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
@@ -27,6 +27,8 @@ import { useState } from 'react';
 import DarkModeToggle from "react-dark-mode-toggle";
 import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
@@ -77,6 +79,12 @@ const App: React.FunctionComponent = () => {
     }
   ]
 
+  useEffect(() => {
+    AOS.init({
+      duration : 2000
+    });
+  }, []);
+
   const footerCool = () => {
     alert('😁🤙')
   }
@@ -90,8 +98,9 @@ const App: React.FunctionComponent = () => {
   return (
     <ThemeProvider theme={theme}>
       <Paper>
+        <div style={{ paddingBottom: '20px' }}></div>
         <Container style={{ paddingLeft: '0px' }}>
-          <Nav>
+          <Nav data-aos='fade-down' data-aos-duartion='200'>
             <Nav.Item>
               <Nav.Link href="/" id='namelogo' style={{ color: 'inherit' }}>Hasan</Nav.Link>
             </Nav.Item>
@@ -104,29 +113,36 @@ const App: React.FunctionComponent = () => {
             </div>
           </Nav>
           <div style={{ paddingLeft: '15px' }}>
-            <div className="display-4" style={styles.auxTop}>
-              <span>Hi</span>, my name is Hasan,
-            </div>
-            <div className="display-4">
-              <p>I am a Software Engineer<span></span></p>
-            </div>
-            <div>
-              <p id="personal-quality" className="text-justify">
-                I enjoy
-                <span className="personal-quality-bold"> solving </span> complex
-                problems. I provide an
-                <span className="personal-quality-bold"> effective & efficient </span>
+            <Row>
+              <Col sm={9}>
+                <div className="display-4" style={styles.auxTop} data-aos='fade-down' data-aos-delay='400'>
+                  <span>Hi</span>, my name is Hasan,
+                </div>
+                <div className="display-4" data-aos='fade-down' data-aos-delay='400'>
+                  <p>I am a Software Engineer<span></span></p>
+                </div>
+              </Col>
+              <Col sm={3}></Col>
+              <Col sm={12} md={8}>
+                <div>
+                  <p id="personal-quality" className="text-justify" data-aos='fade-down'>
+                    I enjoy
+                    <span className="personal-quality-bold"> solving </span> complex
+                    problems. I provide an
+                    <span className="personal-quality-bold"> effective & efficient </span>
 
-                solution. Nothing brings me more
-                <span className="personal-quality-bold"> excitement </span> and
-                <span className="personal-quality-bold"> motivation </span> than
-                <span className="personal-quality-bold"> building </span>
-                something out of nothing.
-              </p>
-            </div>
+                    solution. Nothing brings me more
+                    <span className="personal-quality-bold"> excitement </span> and
+                    <span className="personal-quality-bold"> motivation </span> than
+                    <span className="personal-quality-bold"> building </span>
+                    something out of nothing.
+                  </p>
+                </div>
+              </Col>
+            </Row>
             <div>
-              <Row>
-                <Col sm={9}>
+              <Row style={{ overflowX: 'hidden' }}>
+                <Col sm={8} data-aos='fade-right'>
                   <Button href={require('./docs/resume.pdf')} target="_blank" className="btn-dark" id='resume'>
                     <p style={styles.linkAuxTop}>Resume</p>
                   </Button>{' '}
@@ -134,7 +150,7 @@ const App: React.FunctionComponent = () => {
                     <p style={styles.linkAuxTop}>Projects</p>
                   </Button>
                 </Col>
-                <Col sm={3} style={{ marginTop: '50px' }}>
+                <Col sm={4} style={{ marginTop: '50px' }} data-aos='fade-left'>
                   <Button href="https://github.com/hzbrz" target="_blank" style={styles.btnAux}>
                     <FontAwesomeIcon className='socials' icon={faGithub} size="2x" />
                   </Button>
@@ -149,7 +165,7 @@ const App: React.FunctionComponent = () => {
             </div>
           </div>
 
-          <div>
+          <div style={{ paddingLeft: '10px' }} data-aos='fade-down' data-aos-offset='200'  data-aos-once='true'>
             <h2 id='projects' style={{ textAlign: 'center', marginTop: '150px', fontWeight: 900 }}>Projects</h2>
             <div style={{ marginTop: '50px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
               {
@@ -172,10 +188,10 @@ const App: React.FunctionComponent = () => {
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Row>
+            <Row style={{ overflowX: 'hidden' }}>
               <Col sm={6}>
-                <h2 className='h2Title'>Experience</h2>
-                <div>
+                <div data-aos='fade-right' data-aos-offset='260'>
+                  <h2 className='h2Title'>Experience</h2>
                   <ExpSkillPaper
                     paperWidth={500}
                     title={'Foobee Inc.'}
@@ -204,7 +220,7 @@ const App: React.FunctionComponent = () => {
                   </ExpSkillPaper>
                 </div>
                 <h2 style={{ marginTop: '40px', textAlign: 'center', fontWeight: 900 }}>Education</h2>
-                <div style={{ marginBottom: '100px' }}>
+                <div style={{ marginBottom: '100px' }} data-aos='fade-right' data-aos-offset='130'>
                   <ExpSkillPaper
                     paperWidth={500}
                     title={'George Mason University'}
@@ -219,7 +235,7 @@ const App: React.FunctionComponent = () => {
                   </ExpSkillPaper>
                 </div>
               </Col>
-              <Col sm={6}>
+              <Col sm={6} data-aos='fade-left' data-aos-offset='270'>
                 <h2 className='h2Title'>Skills</h2>
                 <Row>
                   <Col className="svgLogoStyles" sm={4}><PythonLogo height={100} width={100} /></Col>

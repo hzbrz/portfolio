@@ -7,6 +7,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100%;
   margin: 0;
+  background-color: #000000d2;
 
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ body {
   font-weight: 590;
   line-height: 1.5rem;
   letter-spacing: 0.2px;
-  width: 50%;
+  width: 80%;
   /* color: #666; */
 }
 
@@ -173,12 +174,7 @@ footer {
   cursor: pointer;
 }
 
-.css-1k23hlb-MuiButtonBase-root-MuiButton-root:hover {
-  box-shadow: 0px 10px 30px rgb(255, 87, 34) !important;
-  background-color: #ee670c6e !important;
-}
-
-.css-1is3qj5-MuiButtonBase-root-MuiButton-root:hover {
+.tag:hover {
   box-shadow: 0px 10px 30px rgb(255, 87, 34) !important;
   background-color: #ee670c6e !important;
 }
